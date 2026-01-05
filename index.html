@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Soul Pole</title>
+    <link rel="stylesheet" href="styles.css" /> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="#" class="logo-link">
+            <img class="logo-flor" src="imagenes/logoTitulo.png" alt="Flor de cerezo" />
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#sobre">Sobre la sala</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><button onclick="bonosPrecios()"> Bonos y precios</button></li>
+                <li><button onclick="irAInicioDeSesion()">🔒 Inicio de Sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+   <div id="bonos-modal" class="modal-container">
+    <div class="modal-card">
+        <button class="cerrar-modal" onclick="cerrarBonosPrecios()">&times;</button>
+        
+        <div id="bonos-info">
+            <h2>💰 Precios y Bonos 💰</h2>
+            
+            <div class="bono" onclick="comprarBono('Bono 4 clases', 30)">
+                <h3>Bono 4 clases</h3>
+                <p><strong>Precio:</strong> 30€</p>
+            </div>
+            
+            <div class="bono" onclick="comprarBono('Bono 10 clases', 80)">
+                <h3>Bono 10 clases</h3>
+                <p><strong>Precio:</strong> 80€</p>
+            </div>
+            
+            <div class="bono" onclick="comprarBono('Clase suelta', 10)">
+                <h3>Clase suelta</h3>
+                <p><strong>Precio:</strong> 10€</p>
+            </div>
+        </div>
+
+        <div id="pago-info" style="display: none;">
+            <h2>Pagar <span id="bono-elegido"></span></h2>
+            <p>Total a pagar: <strong id="precio-total"></strong></p>
+
+            <form id="pago-form">
+                <input type="text" placeholder="Número de Tarjeta" required>
+                <input type="text" placeholder="MM/AA" required>
+                <input type="text" placeholder="CVV" required>
+                <button type="submit">Pagar Ahora</button>
+            </form>
+
+            <button class="volver-btn" onclick="volverABonos()">← Volver a Bonos</button>
+        </div>
+    </div>
+</div>
+
+    <section class="hero">
+        <div class="hero-carrusel">
+            <img src="imagenes/salaPole.jpg"
+                alt="sala de pole" class="carrusel-img active" loading="lazy">
+            <img src="imagenes/contraluz.jpg" 
+                
+                alt="Chicas haciendo pole en contraluz" class="carrusel-img" loading="lazy">
+            <img src="imagenes/imagenpole.jpg"
+                  alt="otra imagen de soulpole" class="carrusel-img" loading="lazy">
+            <button class="carrusel-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carrusel-nav next" onclick="changeSlide(1)">&#10095;</button>
+        </div> <div class="hero-text">
+            <h1>Bienvenida a Soul Pole</h1>
+            <p>Tu espacio libre para entrenar con alma</p>
+        </div>
+    </section>
+
+    <section id="sobre" class="info">
+        <h2>¿Qué es Soul Pole?</h2>
+        <p>Un espacio íntimo y libre donde entrenar pole dance a tu ritmo. Sin horarios, sin juicios, con alma.
+            <br>Te invitamos a descubrir un espacio donde cada giro cuenta una historia
+             y cada entrenamiento es un paso más hacia tu bienestar integral. ¡Ven y entrena con alma!
+        </p>
+    </section>
+
+    <section id="reservas" class="info">
+        <h2>Reservas</h2>
+        <p>Muy pronto podrás reservar tu hora aquí. De momento, puedes escribirnos para más info.</p>
+        <button class = "reserva "onclick="verificarSesionYReservar()">Reserva tu horario</button>
+
+        <div id="formulario-reserva" style="display:none;">
+            <h3>Reserva tu espacio</h3>
+            
+            <label for="barra">Elige tu barra:</label>
+            <select id="barra">
+                <option value="barra1">Barra 1</option>
+                <option value="barra2">Barra 2</option>
+                <option value="barra3">Barra 3</option>
+            </select>
+            
+            <label for="fecha">Elige la fecha:</label>
+            <input type="date" id="fecha">
+            
+            <label for="hora">Elige la hora:</label>
+            <input type="time" id="hora">
+            
+            <button onclick="procesarReserva()">Confirmar Reserva</button>
+        </div>
+
+    </section>
+
+    <section id="contacto" class="info">
+        <h2>Contacto</h2>
+        <p>Email: contacto@soulpole.com</p>
+        <p>Instagram: @soulpole</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Soul Pole. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
