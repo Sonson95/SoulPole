@@ -1,0 +1,104 @@
+/* Estilos comunes para Login y Register */
+body {
+    
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fffafc;
+    padding-top: 0px;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    color: #656f76;
+    text-align: center;
+    padding-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+    
+}
+
+.login-container,
+.register-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.login-container h2,
+.register-container h2 {
+    margin-bottom: 20px;
+    color: #6fb9f2;
+}
+
+.login-form,
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form input,
+.register-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login-form button,
+.register-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f02070;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover,
+.register-form button:hover {
+    background-color: #d6185d;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.register-link a {
+    color: #6fb9f2;
+    text-decoration: none;
+    font-weight: 500;
+}
+.register-link a:hover {
+    text-decoration: underline;
+}
+.boton{
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+}
+.social_login img {
+    width: 30px;
+    height: 20px;
+    
+}
+.social_login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
