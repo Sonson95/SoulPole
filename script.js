@@ -1,5 +1,5 @@
-// variable global para ver el estado de sesion del usuario
-let usuarioHaIniciadoSesion= true; 
+// variable global para ver el estado de sesion del usuario se puede cambiar a true para probar otras funcionalidades
+let usuarioHaIniciadoSesion= false; 
 
 // Variable global para almacenar el temporizador del autoplay
 let autoplayInterval;
